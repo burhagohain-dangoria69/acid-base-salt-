@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2 - Acid, Base & Salts MCQ Test</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e74c3c;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .instructions {
+            background-color: #fdeaea;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .instructions h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .instructions ul {
+            margin-left: 20px;
+        }
+        
+        .question {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .question-number {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .options {
+            margin-left: 20px;
+        }
+        
+        .option {
+            margin-bottom: 8px;
+        }
+        
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        
+        .submit-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 12px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        #results {
+            display: none;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+        
+        .results-header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e74c3c;
+        }
+        
+        .score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 15px 0;
+        }
+        
+        .correct-answer {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .incorrect-answer {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .unattempted {
+            color: #f39c12;
+            font-weight: bold;
+        }
+        
+        .results-question {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .correct {
+            background-color: #27ae60;
+        }
+        
+        .incorrect {
+            background-color: #e74c3c;
+        }
+        
+        .unattempted-indicator {
+            background-color: #f39c12;
+        }
+        
+        .summary {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .summary-item {
+            text-align: center;
+        }
+        
+        .summary-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .correct .summary-value {
+            color: #27ae60;
+        }
+        
+        .incorrect .summary-value {
+            color: #e74c3c;
+        }
+        
+        .unattempted-summary .summary-value {
+            color: #f39c12;
+        }
+        
+        .restart-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .explanation {
+            background-color: #f8f9fa;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #3498db;
+        }
+        
+        .section-title {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Science NCERT Chapter 2 - Acid, Base & Salts</h1>
+            <h2>MCQ Test</h2>
+            <p>Total 30 items</p>
+        </header>
+        
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <ul>
+                <li>Choose the one best option (a/b/c/d) for each question.</li>
+                <li>You can review and change your answers before submitting.</li>
+                <li>After submitting, you'll see a detailed result with explanations for all answers.</li>
+            </ul>
+        </div>
+        
+        <form id="mcqTest">
+            <div class="section-title">ACID, BASE & SALTS MCQ TEST</div>
+            
+            <div class="question">
+                <div class="question-number">1. Which of the following is a natural indicator?</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q1" value="a"> (a) Phenolphthalein</div>
+                    <div class="option"><input type="radio" name="q1" value="b"> (b) Methyl orange</div>
+                    <div class="option"><input type="radio" name="q1" value="c"> (c) Turmeric</div>
+                    <div class="option"><input type="radio" name="q1" value="d"> (d) Litmus paper</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">2. The gas evolved when zinc reacts with dilute H₂SO₄ is:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q2" value="a"> (a) CO₂</div>
+                    <div class="option"><input type="radio" name="q2" value="b"> (b) H₂</div>
+                    <div class="option"><input type="radio" name="q2" value="c"> (c) SO₂</div>
+                    <div class="option"><input type="radio" name="q2" value="d"> (d) O₂</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">3. pH of a neutral solution at 25°C is:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q3" value="a"> (a) 0</div>
+                    <div class="option"><input type="radio" name="q3" value="b"> (b) 7</div>
+                    <div class="option"><input type="radio" name="q3" value="c"> (c) 14</div>
+                    <div class="option"><input type="radio" name="q3" value="d"> (d) 1</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">4. Which salt is formed from a strong acid and a weak base?</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q4" value="a"> (a) NaCl</div>
+                    <div class="option"><input type="radio" name="q4" value="b"> (b) CH₃COONa</div>
+                    <div class="option"><input type="radio" name="q4" value="c"> (c) NH₄Cl</div>
+                    <div class="option"><input type="radio" name="q4" value="d"> (d) Na₂CO₃</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">5. Water of crystallisation in CuSO₄·5H₂O is:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q5" value="a"> (a) 2</div>
+                    <div class="option"><input type="radio" name="q5" value="b"> (b) 5</div>
+                    <div class="option"><input type="radio" name="q5" value="c"> (c) 10</div>
+                    <div class="option"><input type="radio" name="q5" value="d"> (d) 1</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">6. Plaster of Paris is stored in airtight containers because:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q6" value="a"> (a) It oxidises</div>
+                    <div class="option"><input type="radio" name="q6" value="b"> (b) It absorbs moisture and sets</div>
+                    <div class="option"><input type="radio" name="q6" value="c"> (c) It evaporates</div>
+                    <div class="option"><input type="radio" name="q6" value="d"> (d) It decomposes</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">7. Which base is used in toothpaste to neutralise mouth acids?</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q7" value="a"> (a) NaOH</div>
+                    <div class="option"><input type="radio" name="q7" value="b"> (b) Mg(OH)₂</div>
+                    <div class="option"><input type="radio" name="q7" value="c"> (c) Ca(OH)₂</div>
+                    <div class="option"><input type="radio" name="q7" value="d"> (d) NH₄OH</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">8. Chlor-alkali process uses aqueous solution of:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q8" value="a"> (a) Na₂CO₃</div>
+                    <div class="option"><input type="radio" name="q8" value="b"> (b) NaCl</div>
+                    <div class="option"><input type="radio" name="q8" value="c"> (c) CaCl₂</div>
+                    <div class="option"><input type="radio" name="q8" value="d"> (d) KCl</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">9. Bee sting contains:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q9" value="a"> (a) Acetic acid</div>
+                    <div class="option"><input type="radio" name="q9" value="b"> (b) Methanoic acid</div>
+                    <div class="option"><input type="radio" name="q9" value="c"> (c) Citric acid</div>
+                    <div class="option"><input type="radio" name="q9" value="d"> (d) Lactic acid</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">10. Which of the following is a weak acid?</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q10" value="a"> (a) HCl</div>
+                    <div class="option"><input type="radio" name="q10" value="b"> (b) H₂SO₄</div>
+                    <div class="option"><input type="radio" name="q10" value="c"> (c) CH₃COOH</div>
+                    <div class="option"><input type="radio" name="q10" value="d"> (d) HNO₃</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">11. The pH at which tooth enamel starts decaying is:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q11" value="a"> (a) 7.0</div>
+                    <div class="option"><input type="radio" name="q11" value="b"> (b) 6.5</div>
+                    <div class="option"><input type="radio" name="q11" value="c"> (c) 5.5</div>
+                    <div class="option"><input type="radio" name="q11" value="d"> (d) 4.5</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">12. Reaction of metal carbonate with acid gives:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q12" value="a"> (a) Salt + H₂</div>
+                    <div class="option"><input type="radio" name="q12" value="b"> (b) Salt + CO₂ + H₂O</div>
+                    <div class="option"><input type="radio" name="q12" value="c"> (c) Salt + O₂</div>
+                    <div class="option"><input type="radio" name="q12" value="d"> (d) Salt + H₂O</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">13. Which acid is present in vinegar?</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q13" value="a"> (a) Citric</div>
+                    <div class="option"><input type="radio" name="q13" value="b"> (b) Acetic</div>
+                    <div class="option"><input type="radio" name="q13" value="c"> (c) Lactic</div>
+                    <div class="option"><input type="radio" name="q13" value="d"> (d) Tartaric</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">14. Bleaching powder's chemical formula is:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q14" value="a"> (a) CaOCl₂</div>
+                    <div class="option"><input type="radio" name="q14" value="b"> (b) Ca(OCl)₂</div>
+                    <div class="option"><input type="radio" name="q14" value="c"> (c) CaCl₂</div>
+                    <div class="option"><input type="radio" name="q14" value="d"> (d) CaO</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">15. pH of 10⁻³ M HCl solution is:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q15" value="a"> (a) 3</div>
+                    <div class="option"><input type="radio" name="q15" value="b"> (b) 11</div>
+                    <div class="option"><input type="radio" name="q15" value="c"> (c) 7</div>
+                    <div class="option"><input type="radio" name="q15" value="d"> (d) 1</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">16. Which salt is used for removing permanent hardness of water?</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q16" value="a"> (a) NaCl</div>
+                    <div class="option"><input type="radio" name="q16" value="b"> (b) Na₂CO₃</div>
+                    <div class="option"><input type="radio" name="q16" value="c"> (c) NaHCO₃</div>
+                    <div class="option"><input type="radio" name="q16" value="d"> (d) CaSO₄</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">17. When acids react with metal oxides, the products are:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q17" value="a"> (a) Salt + H₂</div>
+                    <div class="option"><input type="radio" name="q17" value="b"> (b) Salt + CO₂</div>
+                    <div class="option"><input type="radio" name="q17" value="c"> (c) Salt + H₂O</div>
+                    <div class="option"><input type="radio" name="q17" value="d"> (d) Salt + O₂</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">18. The acid present in ant sting is:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q18" value="a"> (a) Acetic</div>
+                    <div class="option"><input type="radio" name="q18" value="b"> (b) Methanoic</div>
+                    <div class="option"><input type="radio" name="q18" value="c"> (c) Lactic</div>
+                    <div class="option"><input type="radio" name="q18" value="d"> (d) Citric</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">19. Which is NOT an alkali?</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q19" value="a"> (a) NaOH</div>
+                    <div class="option"><input type="radio" name="q19" value="b"> (b) KOH</div>
+                    <div class="option"><input type="radio" name="q19" value="c"> (c) NH₄OH</div>
+                    <div class="option"><input type="radio" name="q19" value="d"> (d) Fe(OH)₃</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">20. The gas liberated at anode during chlor-alkali process is:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q20" value="a"> (a) H₂</div>
+                    <div class="option"><input type="radio" name="q20" value="b"> (b) Cl₂</div>
+                    <div class="option"><input type="radio" name="q20" value="c"> (c) O₂</div>
+                    <div class="option"><input type="radio" name="q20" value="d"> (d) N₂</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">21. Assertion (A): Dry HCl gas does not change dry litmus colour.<br>Reason (R): Acids show properties only in aqueous solution.</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q21" value="a"> (a) Both A & R true, R explains A</div>
+                    <div class="option"><input type="radio" name="q21" value="b"> (b) Both true, R doesn't explain A</div>
+                    <div class="option"><input type="radio" name="q21" value="c"> (c) A true, R false</div>
+                    <div class="option"><input type="radio" name="q21" value="d"> (d) A false, R true</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">22. A solution has pH 9. Its [H⁺] compared to neutral solution is:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q22" value="a"> (a) 10⁻² times</div>
+                    <div class="option"><input type="radio" name="q22" value="b"> (b) 10² times</div>
+                    <div class="option"><input type="radio" name="q22" value="c"> (c) Same</div>
+                    <div class="option"><input type="radio" name="q22" value="d"> (d) 10⁷ times</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">23. Setting of Plaster of Paris involves:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q23" value="a"> (a) Oxidation</div>
+                    <div class="option"><input type="radio" name="q23" value="b"> (b) Reduction</div>
+                    <div class="option"><input type="radio" name="q23" value="c"> (c) Hydration</div>
+                    <div class="option"><input type="radio" name="q23" value="d"> (d) Dehydration</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">24. Which reaction is used in soda-acid fire extinguishers?</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q24" value="a"> (a) Acid + metal</div>
+                    <div class="option"><input type="radio" name="q24" value="b"> (b) Base + metal oxide</div>
+                    <div class="option"><input type="radio" name="q24" value="c"> (c) Acid + metal bicarbonate</div>
+                    <div class="option"><input type="radio" name="q24" value="d"> (d) Base + non-metal oxide</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">25. Assertion (A): Baking powder is used instead of baking soda in cooking.<br>Reason (R): Baking powder contains tartaric acid which reacts slowly with NaHCO₃.</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q25" value="a"> (a) Both A & R true, R explains A</div>
+                    <div class="option"><input type="radio" name="q25" value="b"> (b) Both true, R doesn't explain A</div>
+                    <div class="option"><input type="radio" name="q25" value="c"> (c) A true, R false</div>
+                    <div class="option"><input type="radio" name="q25" value="d"> (d) A false, R true</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">26. The difference in water molecules between gypsum and POP is:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q26" value="a"> (a) 1½</div>
+                    <div class="option"><input type="radio" name="q26" value="b"> (b) 2</div>
+                    <div class="option"><input type="radio" name="q26" value="c"> (c) ½</div>
+                    <div class="option"><input type="radio" name="q26" value="d"> (d) 3</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">27. Which substance is used to treat wasp stings?</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q27" value="a"> (a) Baking soda</div>
+                    <div class="option"><input type="radio" name="q27" value="b"> (b) Vinegar</div>
+                    <div class="option"><input type="radio" name="q27" value="c"> (c) Ca(OH)₂</div>
+                    <div class="option"><input type="radio" name="q27" value="d"> (d) Soap</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">28. pH of blood is maintained between:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q28" value="a"> (a) 6.8-7.0</div>
+                    <div class="option"><input type="radio" name="q28" value="b"> (b) 7.0-7.2</div>
+                    <div class="option"><input type="radio" name="q28" value="c"> (c) 7.35-7.45</div>
+                    <div class="option"><input type="radio" name="q28" value="d"> (d) 8.0-8.5</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">29. On heating, blue vitriol changes to white because of:</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q29" value="a"> (a) Oxidation</div>
+                    <div class="option"><input type="radio" name="q29" value="b"> (b) Loss of water of crystallisation</div>
+                    <div class="option"><input type="radio" name="q29" value="c"> (c) Reduction</div>
+                    <div class="option"><input type="radio" name="q29" value="d"> (d) Decomposition</div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-number">30. Which salt is formed when strong base reacts with weak acid?</div>
+                <div class="options">
+                    <div class="option"><input type="radio" name="q30" value="a"> (a) Neutral</div>
+                    <div class="option"><input type="radio" name="q30" value="b"> (b) Acidic</div>
+                    <div class="option"><input type="radio" name="q30" value="c"> (c) Basic</div>
+                    <div class="option"><input type="radio" name="q30" value="d"> (d) Amphoteric</div>
+                </div>
+            </div>
+            
+            <button type="button" class="submit-btn" id="submitBtn">Submit Answers</button>
+        </form>
+        
+        <div id="results">
+            <div class="results-header">
+                <h2>Test Results - Chapter 2: Acid, Base & Salts</h2>
+                <div class="score">Your Score: <span id="scoreValue">0</span>/30</div>
+                <p>Percentage: <span id="percentage">0</span>%</p>
+            </div>
+            
+            <div class="summary">
+                <div class="summary-item correct">
+                    <div class="summary-value" id="correctCount">0</div>
+                    <div>Correct</div>
+                </div>
+                <div class="summary-item incorrect">
+                    <div class="summary-value" id="incorrectCount">0</div>
+                    <div>Incorrect</div>
+                </div>
+                <div class="summary-item unattempted-summary">
+                    <div class="summary-value" id="unattemptedCount">0</div>
+                    <div>Unattempted</div>
+                </div>
+            </div>
+            
+            <div id="detailedResults">
+                <!-- Results will be populated here by JavaScript -->
+            </div>
+            
+            <button class="restart-btn" id="restartBtn">Take Test Again</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            // Correct answers
+            const correctAnswers = {
+                q1: 'c', q2: 'b', q3: 'b', q4: 'c', q5: 'b',
+                q6: 'b', q7: 'b', q8: 'b', q9: 'b', q10: 'c',
+                q11: 'c', q12: 'b', q13: 'b', q14: 'a', q15: 'a',
+                q16: 'b', q17: 'c', q18: 'b', q19: 'd', q20: 'b',
+                q21: 'a', q22: 'a', q23: 'c', q24: 'c', q25: 'a',
+                q26: 'a', q27: 'b', q28: 'c', q29: 'b', q30: 'c'
+            };
+            
+            // Explanations
+            const explanations = {
+                q1: "Turmeric is a naturally occurring indicator found in plants, while phenolphthalein and methyl orange are synthetic. Litmus is natural but is usually used as paper strips.",
+                q2: "Metals react with dilute acids to liberate hydrogen gas. Reaction: Zn + H₂SO₄ → ZnSO₄ + H₂.",
+                q3: "Pure water has equal concentrations of H⁺ and OH⁻ ions, giving a pH of 7, which is neutral.",
+                q4: "NH₄Cl is formed from strong HCl and weak NH₄OH, making the solution acidic (pH < 7). NaCl is neutral, CH₃COONa and Na₂CO₃ are basic salts.",
+                q5: "The formula shows 5 molecules of water of crystallisation per formula unit of copper sulphate.",
+                q6: "POP (CaSO₄·½H₂O) absorbs water from air and sets into hard gypsum, losing its usability.",
+                q7: "Magnesium hydroxide (Milk of Magnesia) is mild, non-corrosive, and used in toothpaste and antacids.",
+                q8: "The process electrolyses concentrated brine (NaCl solution) to produce NaOH, Cl₂, and H₂.",
+                q9: "Bee venom is acidic due to methanoic (formic) acid, which is why baking soda (base) neutralises it.",
+                q10: "Acetic acid ionises only partially in water, making it weak. HCl, H₂SO₄, and HNO₃ are strong acids.",
+                q11: "Enamel (hydroxyapatite) begins to corrode when mouth pH falls below 5.5 due to bacterial acid production.",
+                q12: "Metal carbonates/bicarbonates react with acids to produce salt, carbon dioxide, and water.",
+                q13: "Vinegar contains 5-8% acetic acid (CH₃COOH).",
+                q14: "Bleaching powder is calcium oxychloride, with approximate formula CaOCl₂.",
+                q15: "pH = -log[H⁺]; for 10⁻³ M HCl, [H⁺] = 10⁻³, so pH = 3.",
+                q16: "Washing soda (Na₂CO₃) precipitates Ca²⁺/Mg²⁺ ions as carbonates, removing hardness.",
+                q17: "Metal oxides are basic oxides; they react with acids to form salt and water.",
+                q18: "Ants inject methanoic acid, causing pain and irritation.",
+                q19: "Iron(III) hydroxide is insoluble in water and does not produce OH⁻ ions, so it's a base but not an alkali.",
+                q20: "At the anode, chloride ions are oxidised to chlorine gas. Hydrogen is liberated at the cathode.",
+                q21: "Dry HCl lacks H⁺ ions. Only in water does HCl ionise to H₃O⁺, showing acidic properties and changing litmus colour.",
+                q22: "Neutral pH = 7, [H⁺] = 10⁻⁷ M. pH 9 => [H⁺] = 10⁻⁹ M. Ratio = 10⁻⁹/10⁻⁷ = 10⁻².",
+                q23: "POP combines with water to form gypsum, a hard solid mass.",
+                q24: "H₂SO₄ reacts with NaHCO₃ to produce CO₂ gas, which extinguishes fire.",
+                q25: "Baking powder is a mixture of NaHCO₃ and tartaric acid. The slow reaction ensures controlled CO₂ release, making cakes fluffy without bitterness.",
+                q26: "Gypsum = CaSO₄·2H₂O, POP = CaSO₄·½H₂O. Difference = 2 - 0.5 = 1.5 molecules.",
+                q27: "Wasp sting is alkaline; acidic vinegar neutralises it. Bee sting is acidic, neutralised by baking soda.",
+                q28: "Even slight deviations can disrupt enzyme function and be fatal.",
+                q29: "CuSO₄·5H₂O loses water to become anhydrous CuSO₄, which is white.",
+                q30: "The salt hydrolyses to produce OH⁻ ions, making the solution basic (pH > 7), e.g., CH₃COONa."
+            };
+            
+            // Questions text
+            const questions = {
+                q1: "Which of the following is a natural indicator?",
+                q2: "The gas evolved when zinc reacts with dilute H₂SO₄ is:",
+                q3: "pH of a neutral solution at 25°C is:",
+                q4: "Which salt is formed from a strong acid and a weak base?",
+                q5: "Water of crystallisation in CuSO₄·5H₂O is:",
+                q6: "Plaster of Paris is stored in airtight containers because:",
+                q7: "Which base is used in toothpaste to neutralise mouth acids?",
+                q8: "Chlor-alkali process uses aqueous solution of:",
+                q9: "Bee sting contains:",
+                q10: "Which of the following is a weak acid?",
+                q11: "The pH at which tooth enamel starts decaying is:",
+                q12: "Reaction of metal carbonate with acid gives:",
+                q13: "Which acid is present in vinegar?",
+                q14: "Bleaching powder's chemical formula is:",
+                q15: "pH of 10⁻³ M HCl solution is:",
+                q16: "Which salt is used for removing permanent hardness of water?",
+                q17: "When acids react with metal oxides, the products are:",
+                q18: "The acid present in ant sting is:",
+                q19: "Which is NOT an alkali?",
+                q20: "The gas liberated at anode during chlor-alkali process is:",
+                q21: "Assertion (A): Dry HCl gas does not change dry litmus colour.<br>Reason (R): Acids show properties only in aqueous solution.",
+                q22: "A solution has pH 9. Its [H⁺] compared to neutral solution is:",
+                q23: "Setting of Plaster of Paris involves:",
+                q24: "Which reaction is used in soda-acid fire extinguishers?",
+                q25: "Assertion (A): Baking powder is used instead of baking soda in cooking.<br>Reason (R): Baking powder contains tartaric acid which reacts slowly with NaHCO₃.",
+                q26: "The difference in water molecules between gypsum and POP is:",
+                q27: "Which substance is used to treat wasp stings?",
+                q28: "pH of blood is maintained between:",
+                q29: "On heating, blue vitriol changes to white because of:",
+                q30: "Which salt is formed when strong base reacts with weak acid?"
+            };
+            
+            // Options text
+            const options = {
+                q1: {
+                    a: "Phenolphthalein",
+                    b: "Methyl orange",
+                    c: "Turmeric",
+                    d: "Litmus paper"
+                },
+                q2: {
+                    a: "CO₂",
+                    b: "H₂",
+                    c: "SO₂",
+                    d: "O₂"
+                },
+                q3: {
+                    a: "0",
+                    b: "7",
+                    c: "14",
+                    d: "1"
+                },
+                q4: {
+                    a: "NaCl",
+                    b: "CH₃COONa",
+                    c: "NH₄Cl",
+                    d: "Na₂CO₃"
+                },
+                q5: {
+                    a: "2",
+                    b: "5",
+                    c: "10",
+                    d: "1"
+                },
+                q6: {
+                    a: "It oxidises",
+                    b: "It absorbs moisture and sets",
+                    c: "It evaporates",
+                    d: "It decomposes"
+                },
+                q7: {
+                    a: "NaOH",
+                    b: "Mg(OH)₂",
+                    c: "Ca(OH)₂",
+                    d: "NH₄OH"
+                },
+                q8: {
+                    a: "Na₂CO₃",
+                    b: "NaCl",
+                    c: "CaCl₂",
+                    d: "KCl"
+                },
+                q9: {
+                    a: "Acetic acid",
+                    b: "Methanoic acid",
+                    c: "Citric acid",
+                    d: "Lactic acid"
+                },
+                q10: {
+                    a: "HCl",
+                    b: "H₂SO₄",
+                    c: "CH₃COOH",
+                    d: "HNO₃"
+                },
+                q11: {
+                    a: "7.0",
+                    b: "6.5",
+                    c: "5.5",
+                    d: "4.5"
+                },
+                q12: {
+                    a: "Salt + H₂",
+                    b: "Salt + CO₂ + H₂O",
+                    c: "Salt + O₂",
+                    d: "Salt + H₂O"
+                },
+                q13: {
+                    a: "Citric",
+                    b: "Acetic",
+                    c: "Lactic",
+                    d: "Tartaric"
+                },
+                q14: {
+                    a: "CaOCl₂",
+                    b: "Ca(OCl)₂",
+                    c: "CaCl₂",
+                    d: "CaO"
+                },
+                q15: {
+                    a: "3",
+                    b: "11",
+                    c: "7",
+                    d: "1"
+                },
+                q16: {
+                    a: "NaCl",
+                    b: "Na₂CO₃",
+                    c: "NaHCO₃",
+                    d: "CaSO₄"
+                },
+                q17: {
+                    a: "Salt + H₂",
+                    b: "Salt + CO₂",
+                    c: "Salt + H₂O",
+                    d: "Salt + O₂"
+                },
+                q18: {
+                    a: "Acetic",
+                    b: "Methanoic",
+                    c: "Lactic",
+                    d: "Citric"
+                },
+                q19: {
+                    a: "NaOH",
+                    b: "KOH",
+                    c: "NH₄OH",
+                    d: "Fe(OH)₃"
+                },
+                q20: {
+                    a: "H₂",
+                    b: "Cl₂",
+                    c: "O₂",
+                    d: "N₂"
+                },
+                q21: {
+                    a: "Both A & R true, R explains A",
+                    b: "Both true, R doesn't explain A",
+                    c: "A true, R false",
+                    d: "A false, R true"
+                },
+                q22: {
+                    a: "10⁻² times",
+                    b: "10² times",
+                    c: "Same",
+                    d: "10⁷ times"
+                },
+                q23: {
+                    a: "Oxidation",
+                    b: "Reduction",
+                    c: "Hydration",
+                    d: "Dehydration"
+                },
+                q24: {
+                    a: "Acid + metal",
+                    b: "Base + metal oxide",
+                    c: "Acid + metal bicarbonate",
+                    d: "Base + non-metal oxide"
+                },
+                q25: {
+                    a: "Both A & R true, R explains A",
+                    b: "Both true, R doesn't explain A",
+                    c: "A true, R false",
+                    d: "A false, R true"
+                },
+                q26: {
+                    a: "1½",
+                    b: "2",
+                    c: "½",
+                    d: "3"
+                },
+                q27: {
+                    a: "Baking soda",
+                    b: "Vinegar",
+                    c: "Ca(OH)₂",
+                    d: "Soap"
+                },
+                q28: {
+                    a: "6.8-7.0",
+                    b: "7.0-7.2",
+                    c: "7.35-7.45",
+                    d: "8.0-8.5"
+                },
+                q29: {
+                    a: "Oxidation",
+                    b: "Loss of water of crystallisation",
+                    c: "Reduction",
+                    d: "Decomposition"
+                },
+                q30: {
+                    a: "Neutral",
+                    b: "Acidic",
+                    c: "Basic",
+                    d: "Amphoteric"
+                }
+            };
+            
+            let score = 0;
+            let correctCount = 0;
+            let incorrectCount = 0;
+            let unattemptedCount = 0;
+            let resultsHTML = "";
+            
+            // Check each question
+            for (let i = 1; i <= 30; i++) {
+                const questionId = `q${i}`;
+                const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
+                const userAnswer = selectedOption ? selectedOption.value : null;
+                const correctAnswer = correctAnswers[questionId];
+                
+                let resultClass = "";
+                let resultText = "";
+                let indicatorClass = "";
+                
+                if (userAnswer === null) {
+                    resultClass = "unattempted";
+                    resultText = "Not attempted";
+                    indicatorClass = "unattempted-indicator";
+                    unattemptedCount++;
+                } else if (userAnswer === correctAnswer) {
+                    resultClass = "correct-answer";
+                    resultText = "Correct";
+                    indicatorClass = "correct";
+                    score++;
+                    correctCount++;
+                } else {
+                    resultClass = "incorrect-answer";
+                    resultText = "Incorrect";
+                    indicatorClass = "incorrect";
+                    incorrectCount++;
+                }
+                
+                resultsHTML += `
+                    <div class="results-question">
+                        <div class="question-number">
+                            <span class="status-indicator ${indicatorClass}"></span>
+                            ${i}. ${questions[questionId]}
+                        </div>
+                        <p><strong>Your answer:</strong> <span class="${resultClass}">${userAnswer ? '(' + userAnswer + ') ' + options[questionId][userAnswer] : 'Not attempted'}</span></p>
+                        <p><strong>Correct answer:</strong> <span class="correct-answer">(${correctAnswer}) ${options[questionId][correctAnswer]}</span></p>
+                        <div class="explanation">
+                            <strong>Explanation:</strong> ${explanations[questionId]}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Calculate percentage
+            const percentage = ((score / 30) * 100).toFixed(1);
+            
+            // Update results
+            document.getElementById('scoreValue').textContent = score;
+            document.getElementById('percentage').textContent = percentage;
+            document.getElementById('correctCount').textContent = correctCount;
+            document.getElementById('incorrectCount').textContent = incorrectCount;
+            document.getElementById('unattemptedCount').textContent = unattemptedCount;
+            document.getElementById('detailedResults').innerHTML = resultsHTML;
+            
+            // Show results
+            document.getElementById('results').style.display = 'block';
+            
+            // Scroll to results
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Restart button functionality
+        document.getElementById('restartBtn').addEventListener('click', function() {
+            // Reset all radio buttons
+            const radioButtons = document.querySelectorAll('input[type="radio"]');
+            radioButtons.forEach(radio => {
+                radio.checked = false;
+            });
+            
+            // Hide results and scroll to top
+            document.getElementById('results').style.display = 'none';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
